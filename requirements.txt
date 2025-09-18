@@ -17,3 +17,5 @@ ipykernel
 
 # Optional: Observable-style interop tools
 pyodide-http  # for Observable web interop if needed
+
+#Joyfull
