@@ -30,6 +30,14 @@
 - **2020 Census Tracts → NTA/CDTA Equivalency (hm78-6dwm)** — `https://data.cityofnewyork.us/resource/hm78-6dwm.json`
   - Bridge ACS/CCC indicators to analysis geographies; keys: `geoid` ↔ tract datasets, `ntacode`, `cdtacode`
 
+- **NYC Schools (s3k6-pzi2)** — `https://data.cityofnewyork.us/resource/s3k6-pzi2.json`
+  - Point locations for DOE schools; proximity analysis (buffer 100 m)
+  - Filter to Manhattan via `borough in ('M','Manhattan')`; use `location_1` for geometry
+
+- **NYC Health + Hospitals Facilities (q6fj-vxf8)** — `https://data.cityofnewyork.us/resource/q6fj-vxf8.json`
+  - Point locations (Acute Care, Child Health Centers, etc.); proximity analysis (buffer 100 m)
+  - Filter to Manhattan with `borough='Manhattan'`; use `location_1` for geometry
+
 - **Keeping Track Online (CCC NYC) — Income/Child indicators (CD level)**
   - Portal: `https://data.cccnewyork.org/` (Download hub: `https://data.cccnewyork.org/data/download#0/66`)
   - Use: `median_household_income`, `child_poverty_rate` (normalize to `cdtacode`), create income deciles; join to CDTA or via equivalency
