@@ -1,19 +1,27 @@
 # requirements.txt
-# Hello
+# ACE Bus Lane Violations Analysis - Dependencies
 
 # Core data packages
-pandas
-numpy
+pandas>=1.5.0
+numpy>=1.21.0
 
-# Visualization (if you want to output from Python)
-matplotlib
-seaborn
-plotly
+# Geospatial analysis
+geopandas>=0.12.0
+shapely>=1.8.0
+folium>=0.14.0
+
+# Visualization
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.0.0
+
+# Data fetching
+requests>=2.28.0
 
 # Jupyter + notebook support
-notebook
-jupyterlab
-ipykernel
+notebook>=6.4.0
+jupyterlab>=3.4.0
+ipykernel>=6.0.0
 
 # Optional: Observable-style interop tools
 pyodide-http  # for Observable web interop if needed
