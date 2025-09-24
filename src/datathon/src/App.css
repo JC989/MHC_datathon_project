@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.5;
+  color: black;
+  background-color: white;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: gray;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.graph-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.graph-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.graph-placeholder {
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.graph-placeholder h3 {
+  color: #475569;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+/* Bar Chart Styles */
+.chart-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chart-bars {
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+  height: 150px;
+  margin-bottom: 1rem;
+}
+
+.bar {
+  width: 30px;
+  background: linear-gradient(to top, #3b82f6, #60a5fa);
+  border-radius: 4px 4px 0 0;
+  transition: all 0.3s ease;
+}
+
+.bar:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.chart-labels {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+/* Pie Chart Styles */
+.pie-chart {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 1rem auto;
+  position: relative;
+  background: conic-gradient(#3b82f6 0deg 162deg, #ef4444 162deg 270deg, #10b981 270deg 342deg, #f59e0b 342deg 360deg);
+}
+
+.pie-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.color-1 {
+  background-color: #3b82f6;
+}
+.color-2 {
+  background-color: #ef4444;
+}
+.color-3 {
+  background-color: #10b981;
+}
+.color-4 {
+  background-color: #f59e0b;
+}
+
+/* Line Chart Styles */
+.line-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-svg {
+  width: 100%;
+  max-width: 300px;
+  height: 150px;
+  background: #f8fafc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.line-legend {
+  display: flex;
+  gap: 1rem;
+}
+
+.legend-line {
+  width: 20px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.legend-line.blue {
+  background-color: #3b82f6;
+}
+.legend-line.red {
+  background-color: #ef4444;
+}
+
+/* Explanation Styles */
+.explanation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.explanation h3 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.explanation p {
+  color: #475569;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.explanation p:last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .graph-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .graph-placeholder {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1.5rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .graph-section {
+    padding: 1.5rem;
+  }
+}
