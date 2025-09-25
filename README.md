@@ -9,6 +9,7 @@ Make ACE operations more actionable. We measure normalized violation rates (viol
 - Code for the site: `src/datathon`
 
 ### 2‑Minute Video
+![Video presentation](reports/video/video_MHC++.mp4)
 <video width="600" controls>
   <source src="reports/video/video_MHC++.mp4" type="video/mp4">
   Your browser does not support the video tag.
