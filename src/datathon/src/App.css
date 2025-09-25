@@ -34,21 +34,68 @@ body {
 .main-content {
   flex: 1;
   padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   width: 100%;
+}
+
+/* KPI Chips */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: rgba(255,255,255,0.9);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.kpi-chip {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.kpi-title {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 0.35rem;
+}
+
+.kpi-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
 }
 
 .graph-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   background: white;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   border: 1px solid #e2e8f0;
+}
+
+/* Constrain text width but let fullwidth sections expand */
+.graph-section:not(.fullwidth) .explanation,
+.graph-section:not(.fullwidth) .graph-container {
+  max-width: 1400px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .graph-container {
@@ -219,8 +266,27 @@ body {
   margin-top: auto;
 }
 
+/* Simple table */
+.simple-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+.simple-table th, .simple-table td {
+  border: 1px solid #e2e8f0;
+  padding: 8px 10px;
+  text-align: left;
+}
+.simple-table thead th {
+  background: #f8fafc;
+  color: #334155;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+  .kpi-row {
+    grid-template-columns: 1fr;
+  }
   .graph-section {
     grid-template-columns: 1fr;
     gap: 1.5rem;

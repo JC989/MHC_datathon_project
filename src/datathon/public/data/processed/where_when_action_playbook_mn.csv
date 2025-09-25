@@ -1,0 +1,13 @@
+nta2020,ntaname,hour,lane_miles,violations,rate,window,recommendation
+MN1203,Inwood,16,0.520993029359895,12811,24589.58,school_PM (14–16),Post-stop signed loading zone for drop-off/pick-up; targeted enforcement in window
+MN0702,Upper West Side (Central),13,0.1701187723342911,3675,21602.55,other,Light protection or signage; monitor and deploy targeted enforcement
+MN0901,Morningside Heights,11,0.1706396390748625,3547,20786.49,other,Light protection or signage; monitor and deploy targeted enforcement
+MN0702,Upper West Side (Central),14,0.1701187723342911,3370,19809.69,school_PM (14–16),Post-stop signed loading zone for drop-off/pick-up; targeted enforcement in window
+MN0901,Morningside Heights,10,0.1706396390748625,3369,19743.36,other,Light protection or signage; monitor and deploy targeted enforcement
+MN0702,Upper West Side (Central),11,0.1701187723342911,3285,19310.04,other,Light protection or signage; monitor and deploy targeted enforcement
+MN0901,Morningside Heights,12,0.1706396390748625,3267,19145.61,other,Light protection or signage; monitor and deploy targeted enforcement
+MN0702,Upper West Side (Central),12,0.1701187723342911,3087,18146.15,other,Light protection or signage; monitor and deploy targeted enforcement
+MN1203,Inwood,17,0.520993029359895,9423,18086.61,other,Light protection or signage; monitor and deploy targeted enforcement
+MN0901,Morningside Heights,13,0.1706396390748625,3055,17903.23,other,Light protection or signage; monitor and deploy targeted enforcement
+MN0702,Upper West Side (Central),10,0.1701187723342911,2986,17552.44,other,Light protection or signage; monitor and deploy targeted enforcement
+MN0702,Upper West Side (Central),15,0.1701187723342911,2882,16941.11,school_PM (14–16),Post-stop signed loading zone for drop-off/pick-up; targeted enforcement in window
