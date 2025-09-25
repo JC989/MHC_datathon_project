@@ -86,6 +86,7 @@ Notes:
 │   ├── raw/                      # NYC Open Data slices
 │   └── processed/                # canonical artifacts for the site
 ├── notebooks/                    # end-to-end analysis (fetch → process → viz)
+│   ├── 01_ace_violations_data_fetch.ipynb
 │   ├── 02_ace_violations_processing.ipynb
 │   └── 06_ace_violations_visualization.ipynb
 ├── reports/
