@@ -2,6 +2,7 @@ import "./App.css"
 import { useEffect, useState } from "react"
 
 function App() {
+  const base = import.meta.env.BASE_URL || "/"
   const [meanRate, setMeanRate] = useState("—")
   const [peakHospHour, setPeakHospHour] = useState("—")
   const [equityGradient, setEquityGradient] = useState("—")
@@ -21,7 +22,7 @@ function App() {
     }
 
     // KPI 1: Citywide mean rate from rates_by_nta_hour_manhattan.csv
-    fetch("/data/processed/rates_by_nta_hour_manhattan.csv")
+    fetch(`${base}data/processed/rates_by_nta_hour_manhattan.csv`)
       .then(r => r.text())
       .then(t => {
         const rows = parseCSV(t)
@@ -33,7 +34,7 @@ function App() {
       }).catch(() => {})
 
     // KPI 2: Peak near-hospital hour from proximity_hospitals_hourly_share_mn.csv
-    fetch("/data/processed/proximity_hospitals_hourly_share_mn.csv")
+    fetch(`${base}data/processed/proximity_hospitals_hourly_share_mn.csv`)
       .then(r => r.text())
       .then(t => {
         const rows = parseCSV(t)
@@ -49,7 +50,7 @@ function App() {
       }).catch(() => {})
 
     // KPI 3: Equity gradient (bottom vs top income decile)
-    fetch("/data/processed/equity_rates_by_income_decile_mn.csv")
+    fetch(`${base}data/processed/equity_rates_by_income_decile_mn.csv`)
       .then(r => r.text())
       .then(t => {
         const rows = parseCSV(t)
@@ -64,7 +65,7 @@ function App() {
       }).catch(() => {})
 
     // Where/When playbook (top 10 rows)
-    fetch("/data/processed/where_when_action_playbook_mn.csv")
+    fetch(`${base}data/processed/where_when_action_playbook_mn.csv`)
       .then(r => r.text())
       .then(t => {
         const rows = parseCSV(t)
@@ -75,7 +76,7 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>ACE Violations Analysis Dashboard</h1>
+        <h1>2025 MHC++ Datathon</h1>
         <p className="subtitle">After normalizing for exposure (rate = violations / bus-lane miles), we show where and when ACE violations spike in Manhattan and how rates vary by income.</p>
       </header>
 
@@ -112,7 +113,7 @@ function App() {
         <section className="graph-section">
           <div className="graph-container">
             <img
-              src="/img/equity_rate_vs_income_decile_mn.png"
+              src={`${base}img/equity_rate_vs_income_decile_mn.png`}
               width="600"
               alt="Equity Rate vs Income Decile"
             />
@@ -132,7 +133,7 @@ function App() {
         <section className="graph-section">
           <div className="graph-container">
             <img
-              src="/img/proximity_schools_hourly_share_mn.png"
+              src={`${base}img/proximity_schools_hourly_share_mn.png`}
               width="600"
               alt="Share of violations near schools by hour"
             />
@@ -152,7 +153,7 @@ function App() {
         <section className="graph-section">
           <div className="graph-container">
             <img
-              src="/img/proximity_hospitals_hourly_share_mn.png"
+              src={`${base}img/proximity_hospitals_hourly_share_mn.png`}
               width="600"
               alt="Share of violations near hospitals by hour"
             />
@@ -180,7 +181,7 @@ function App() {
               <div style={{width:"100%", height:"80vh", margin:"0 auto"}}>
                 <iframe
                   title="Manhattan Map"
-                  src="/reports/dashboards/map_manhattan_quickcheck.html"
+                  src={`${base}reports/dashboards/map_manhattan_quickcheck.html`}
                   style={{border:"0", width:"100%", height:"100%"}}
                 />
               </div>
